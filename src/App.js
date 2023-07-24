@@ -16,12 +16,13 @@ function App() {
 
   const calcularResultado= () => {
     if(input){
-      setInput(evaluate(input));
-      console.log(input);
+      try {
+        setInput(evaluate(input));
+      } catch (error) {
+        alert('ingresa una operación válida')
+        console.log(error);
+      }
     }
-    // if(input.length()==0){
-    //   alert('ingresa una operación válida');
-    // }
     else{
       alert('ingresa valores para realizar los cálculos');
     }
