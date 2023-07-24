@@ -1,8 +1,8 @@
 import './App.css';
-import guitarra  from './img/guitar.png';
 import Boton from './components/Boton';
 import Pantalla from './components/Pantalla';
 import BotonClear from './components/BotonClear';
+import Logo from './components/Logo';
 import { useState } from 'react';
 import { evaluate } from 'mathjs';
 
@@ -31,13 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='logo-contenedor'>
-        <img
-          src={guitarra}
-          className='logo'
-          alt='logo guitarra'
-        />
-      </div>
+      <Logo/>
 
       <div className='contenedor-calculadora'>
         <Pantalla 
